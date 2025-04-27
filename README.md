@@ -1,7 +1,7 @@
 # Welcome to CHAD
 The original app was android only. This is the same app using react native for cross-platform compatability.
 Below was automatically written when the project was first created
-
+CHANGE API KEYS TO NEW ONE IN PERSON DISCORD
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Get started
