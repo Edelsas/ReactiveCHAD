@@ -3,9 +3,8 @@ import React, { useState } from 'react'
 import { useRouter } from 'expo-router'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
-
-// custom resuable button
-const WideButton = props => {
+// custom reusable button
+const WideButton = (props) => {
   const router = useRouter();
 
   return (
@@ -13,16 +12,15 @@ const WideButton = props => {
       onPress={() => router.navigate(props.navigate)}
       style={styles.button}
       underlayColor={'rgb(47, 131, 188)'}
-      >
+    >
       <Text style={styles.buttonText}>{props.text}</Text>
-
     </TouchableHighlight>
   );
 }
 
 const Welcome = () => {
   const router = useRouter();
-  
+
   const [modalVisible, setModalVisible] = useState(false)
 
   return (
@@ -31,22 +29,21 @@ const Welcome = () => {
       <Text style={styles.title}>Welcome to C.H.A.D.</Text>
 
       <View style={styles.buttonLayout}>
-        <WideButton text="Profile" navigate="/Profile"></WideButton>
-        <WideButton text="Health Trackers" navigate="/OverallHealth"></WideButton>
-        <WideButton text="Diet Recommender" navigate="/Diet"></WideButton>
-        <WideButton text="Workout Planner" navigate="/Workout"></WideButton>
-        <WideButton text="Settings" navigate="/Settings"></WideButton>
-        <WideButton text="Support" navigate="/Profile"></WideButton>
+        <WideButton text="Profile" navigate="/Profile" />
+        <WideButton text="Health Trackers" navigate="/OverallHealth" />
+        <WideButton text="Diet Recommender" navigate="/Diet" />
+        <WideButton text="Workout Planner" navigate="/Workout" />
+        <WideButton text="Challenges" navigate="/Challenges" /> {/* <-- New Button Here */}
+        <WideButton text="Settings" navigate="/Settings" />
+        <WideButton text="Support" navigate="/Profile" />
 
         <TouchableHighlight 
           onPress={() => router.back()}
           style={styles.smallButton}
           underlayColor={'rgba(188, 54, 47, 0.63)'}
-          >
+        >
           <Text style={styles.buttonText}>Log Out</Text>
-
         </TouchableHighlight>
-
       </View>
 
     </SafeAreaView>
